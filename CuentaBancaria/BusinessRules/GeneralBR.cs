@@ -36,5 +36,18 @@ namespace BusinessRules
            return grl.grlInsertarCliente(nombre, apellidos, NumeroTarjeta, Direccion, idEstado, codigoPostal, 
                                           id_Sexo, id_edocivil, celular, telefono, correo, edad, idEjecutivo, saldoini);
        }
+
+       public void actualizarCliente(int id, string nombre, string apellidos, string NumeroTarjeta, string Direccion,
+                                            int idEstado, string codigoPostal, int id_Sexo, int id_edocivil, string celular,
+                                            string telefono, string correo, int edad)
+       {
+            grl.grlActualizarCliente(id, nombre, apellidos, NumeroTarjeta, Direccion, idEstado, codigoPostal, 
+                                          id_Sexo, id_edocivil, celular, telefono, correo, edad);
+       }
+
+       public DataTable obtenerCliente(int idCliente)
+       {
+           return grl.grlObtenerCliente(idCliente);
+       }
     }
 }

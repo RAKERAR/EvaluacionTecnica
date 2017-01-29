@@ -13,6 +13,24 @@ namespace CuentaBancaria {
     public partial class Cliente {
         
         /// <summary>
+        /// upPrincipal control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upPrincipal;
+        
+        /// <summary>
+        /// txtID control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtID;
+        
+        /// <summary>
         /// txtTarjeta control.
         /// </summary>
         /// <remarks>
@@ -40,13 +58,13 @@ namespace CuentaBancaria {
         protected global::System.Web.UI.WebControls.TextBox txtApellidos;
         
         /// <summary>
-        /// txtFechaNacimeinto control.
+        /// txtEdad control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtFechaNacimeinto;
+        protected global::System.Web.UI.WebControls.TextBox txtEdad;
         
         /// <summary>
         /// ddlSexo control.
@@ -65,6 +83,15 @@ namespace CuentaBancaria {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlEstadoCivil;
+        
+        /// <summary>
+        /// txtCorreoElectronico control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtCorreoElectronico;
         
         /// <summary>
         /// txtDireccion control.
@@ -112,6 +139,15 @@ namespace CuentaBancaria {
         protected global::System.Web.UI.WebControls.TextBox txtCelular;
         
         /// <summary>
+        /// txtSaldoIni control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtSaldoIni;
+        
+        /// <summary>
         /// btnGuadar control.
         /// </summary>
         /// <remarks>
@@ -119,5 +155,14 @@ namespace CuentaBancaria {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnGuadar;
+        
+        /// <summary>
+        /// hfEjecutivo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HiddenField hfEjecutivo;
     }
 }

@@ -24,5 +24,17 @@ namespace BusinessRules
            return grl.grlObtenerEstados();
        }
 
+       public DataTable obtenerEdoCivil()
+       {
+           return grl.grlObtenerEdoCivil();
+       }
+
+       public DataTable guardarCliente(string nombre, string apellidos, string NumeroTarjeta, string Direccion,
+                                            int idEstado, string codigoPostal, int id_Sexo, int id_edocivil, string celular,
+                                            string telefono, string correo, int edad, string idEjecutivo, Double saldoini)
+       {
+           return grl.grlInsertarCliente(nombre, apellidos, NumeroTarjeta, Direccion, idEstado, codigoPostal, 
+                                          id_Sexo, id_edocivil, celular, telefono, correo, edad, idEjecutivo, saldoini);
+       }
     }
 }

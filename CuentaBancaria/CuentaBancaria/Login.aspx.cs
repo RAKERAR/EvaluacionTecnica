@@ -22,7 +22,8 @@ namespace CuentaBancaria
             DataTable dtUsuario = gral.validarUsuario(Login1.UserName, Login1.Password);
             if (dtUsuario.Rows.Count > 0)
             {
-                Response.Redirect("~/Default.aspx");
+                if (dtUsuario.Rows[0]["Id_Rol"].ToString() == "1")
+                Response.Redirect("~/Cliente.aspx?ejec=" + dtUsuario.Rows[0]["Usuario"].ToString());
             }
             else
             {//MArca el error

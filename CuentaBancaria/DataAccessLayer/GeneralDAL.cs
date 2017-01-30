@@ -82,5 +82,35 @@ namespace DataAccessLayer
            return procedure.GetDataSet().Tables[0];
 
        }
+
+       public DataTable grlObtenerTiposMovimiento()
+       {
+           StoreProcedure procedure = new StoreProcedure("pa_ObtenerTiposMovimiento");
+           return procedure.GetDataSet().Tables[0];
+       }
+
+       public DataTable grlObtenerMovimientosCliente(int id_Cliente)
+       {
+           StoreProcedure procedure = new StoreProcedure("pa_ObtenerMovimientoCliente");
+           procedure.AddInParameter("@Id_Cliente", DbType.Int16, id_Cliente);
+           return procedure.GetDataSet().Tables[0];
+       }
+
+       public void grlInsertarMovimientoCliente(int id_Cliente, double numeroCuenta, int id_TipoMov, double importe)
+       {
+           StoreProcedure procedure = new StoreProcedure("pa_InsertarMovimiento");
+           procedure.AddInParameter("@Id_Cliente", DbType.Int16, id_Cliente);
+           procedure.AddInParameter("@NumCuenta", DbType.Double, numeroCuenta);
+           procedure.AddInParameter("@Id_TipoMovimiento", DbType.Int16, id_TipoMov);
+           procedure.AddInParameter("@Importe", DbType.Double, importe);
+           procedure.Execute();
+       }
+
+       public DataTable grlObtenerSaldoCliente(int id_Cliente)
+       {
+           StoreProcedure procedure = new StoreProcedure("pa_ObtenerSaldoCliente");
+           procedure.AddInParameter("@Id_Cliente", DbType.Int16, id_Cliente);
+           return procedure.GetDataSet().Tables[0];
+       }
     }
 }

@@ -23,7 +23,9 @@ namespace CuentaBancaria
             if (dtUsuario.Rows.Count > 0)
             {
                 if (dtUsuario.Rows[0]["Id_Rol"].ToString() == "1")
-                Response.Redirect("~/Cliente.aspx?ejec=" + dtUsuario.Rows[0]["Usuario"].ToString());
+                { Response.Redirect("~/Cliente.aspx?ejec=" + dtUsuario.Rows[0]["Usuario"].ToString()); }
+                else
+                { Response.Redirect("~/Movimientos.aspx?caj=" + dtUsuario.Rows[0]["Usuario"].ToString()); }
             }
             else
             {//MArca el error

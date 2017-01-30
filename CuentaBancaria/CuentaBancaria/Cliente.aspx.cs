@@ -84,8 +84,6 @@ namespace CuentaBancaria
                     btnCancelar.Enabled = true;
                     break;
 
-
-
             }
         }
 
@@ -211,6 +209,7 @@ namespace CuentaBancaria
         {
             inicializarControles(true);
             txtID.Enabled = false;
+            txtSaldoIni.Enabled = false;
             comportamientoBotones(eBotonOpciones.EDITAR);
         }
 

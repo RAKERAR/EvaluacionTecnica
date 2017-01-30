@@ -49,5 +49,22 @@ namespace BusinessRules
        {
            return grl.grlObtenerCliente(idCliente);
        }
+
+       public DataTable obtenerTiposMovimiento()
+       {
+           return grl.grlObtenerTiposMovimiento();
+       }
+       public DataTable obtenerMovimientosCliente(int id_Cliente)
+       {
+           return grl.grlObtenerMovimientosCliente(id_Cliente);
+       }
+       public void guardarMovimientoCliente(int id_Cliente, double numeroCuenta, int id_TipoMov, double importe)
+       {
+           grl.grlInsertarMovimientoCliente(id_Cliente, numeroCuenta, id_TipoMov, importe);
+       }
+       public DataTable obtenerSaldoCliente(int id_Cliente)
+       {
+           return grl.grlObtenerSaldoCliente(id_Cliente);
+       }
     }
 }
